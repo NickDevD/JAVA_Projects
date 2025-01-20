@@ -8,6 +8,7 @@ public class Main {
         c.adicionarItem(item1);
         c.adicionarItem(item2);
         c.calcularPreco();
+        c.removerItem(1);
 
 
     }
