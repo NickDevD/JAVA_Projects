@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,50 +17,55 @@ public class Calculadora_Handicap extends JFrame {
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JButton button1 = new JButton();
-        button1.setBounds(30,30,50,30);
+        JButton button1 = new JButton("Calcular");
+        button1.setBounds(30,30,90,30);
         add(button1);
 
-        JButton button2 = new JButton();
-        button2.setBounds(30,50,50,30);
-        add(button2);
+        JLabel label1 = new JLabel("Casa");
+        label1.setBounds(10,100,150,50);
+        add(label1);
+
+        JLabel label2 = new JLabel("Fora");
+        label2.setBounds(10,150,150,50);
+        add(label2);
+
+        JLabel label3 = new JLabel("Handicap");
+        label3.setBounds(1,200,150,50);
+        add(label3);
 
         textField1 = new JTextField();
-        textField1.setBounds(50,100,150,50);
+        textField1.setBounds(60,100,150,50);
         add(textField1);
 
         textField2 = new JTextField();
-        textField2.setBounds(50,150,150,50);
+        textField2.setBounds(60,150,150,50);
         add(textField2);
 
         textField3 = new JTextField();
-        textField3.setBounds(50,200,150,50);
+        textField3.setBounds(60,200,150,50);
         add(textField3);
+
 
         setVisible(true);
 
         button1.addActionListener(this::resultado);
-        button2.addActionListener(this::somar);
 
     }
-    public void somar(ActionEvent actionEvent){
 
-
-    }
     public void resultado(ActionEvent actionEvent){
 
-        Integer casa = Integer.parseInt(textField1.getText());
-        Integer fora = Integer.parseInt(textField2.getText());
-        Integer handicap = Integer.parseInt(textField3.getText());
+        int casa = Integer.parseInt(textField1.getText());
+        int fora = Integer.parseInt(textField2.getText());
+        double handicap = Double.parseDouble(textField3.getText());
 
-        casa += handicap;
+        casa += (int) handicap;
 
         if (casa > fora){
-            System.out.println("Vence");
+            JOptionPane.showMessageDialog(null, "Resultado: Venceu" , "titula", JOptionPane.INFORMATION_MESSAGE);
         }else {
-            System.out.println("perde");
+            JOptionPane.showMessageDialog(null, "Resultado: Perdeu" , "titula", JOptionPane.INFORMATION_MESSAGE);
+
         }
-        JOptionPane.showMessageDialog(null, "Resultado: " , "titula", JOptionPane.ERROR_MESSAGE);
 
     }
 

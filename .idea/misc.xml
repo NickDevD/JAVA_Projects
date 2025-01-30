@@ -5,10 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Sistema_Cadastro/pom.xml" />
+        <option value="$PROJECT_DIR$/Action_Display/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Action_Display/pom.xml" />
         <option value="$PROJECT_DIR$/Sistema_Cadastro/pom.xml" />
       </set>
     </option>

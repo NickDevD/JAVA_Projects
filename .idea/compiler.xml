@@ -9,6 +9,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Action_Display" target="22" />
       <module name="Sistema_Cadastro" target="22" />
     </bytecodeTargetLevel>
   </component>
